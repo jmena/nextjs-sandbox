@@ -9,6 +9,7 @@ export default function AccuracyWidget() {
     <div>
       Accuracy is
       <div>
+        {/* Render only with 2 digits */}
         {(100 * state.accuracy).toLocaleString(undefined, {
           maximumFractionDigits: 1,
         })}
