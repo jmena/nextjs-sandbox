@@ -14,7 +14,6 @@ export function AppWrapper({ children }) {
     accuracy: accuracy,
     setAccuracy: setAccuracy,
   };
-  
 
   return <AppContext.Provider value={appState}>{children}</AppContext.Provider>;
 }

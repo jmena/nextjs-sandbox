@@ -34,15 +34,14 @@ export default function Main() {
   const [people, setPeople] = useState([]);
   console.log("" + people);
   useEffect(() => {
-    return fetch("/api/people")
+    fetch("/api/people")
       .then<Person[]>((r) => r.json())
       .then((data) => setPeople(data));
   }, []);
   console.log("people: " + people);
 
   //   if (error) return <div>failed to load</div>;
-  if (!people || people.length == 0) return <div>loading...</div>;
-
+  if (!people || people.length === 0) return <div>loading...</div>;
 
   return (
     <div>
